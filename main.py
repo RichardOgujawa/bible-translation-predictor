@@ -44,13 +44,13 @@ def get_books_in_bible(bibleId, see_keys=False):
     df = pd.DataFrame(columns=['id', 'nameLong'], data=data)
     return df
     
-bible_versions_df = get_bible_versions()
-print(bible_versions_df)
+# bible_versions_df = get_bible_versions()
+# print(bible_versions_df)
 
-BSB_id = bible_versions_df[bible_versions_df['name'] == 'Berean Standard Bible']['id'].values[0]
-# Get the books in the BSB
-bible_books_df = get_books_in_bible(BSB_id, see_keys=True)
-print(bible_books_df)
+# BSB_id = bible_versions_df[bible_versions_df['name'] == 'Berean Standard Bible']['id'].values[0]
+# # Get the books in the BSB
+# bible_books_df = get_books_in_bible(BSB_id, see_keys=True)
+# print(bible_books_df)
 # ## Fetch data for verses in the bible translations chapter
 # bible_verse_api_url="https://api.scripture.api.bible/v1/bibles/bibleId/chapters/chapterId/verses"
 # print(response.text)
@@ -59,10 +59,15 @@ print(bible_books_df)
 
 ## Get data from bible api
 
-## Homepage
-# @app.route('/')
-# def home():
-#     return config['API_TOKEN']
+# Homepage
+@app.route('/')
+def home():
+    return '<h1>Bible Translation Predictor📖</h1>'
+
+# # Predict translation
+# @app.route('/input/<user-input>')
+# def predict(input):
+#     return model.predict(input)
 
 # if __name__=='__main__':
 #     app.run(debug=True)
