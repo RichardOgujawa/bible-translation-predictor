@@ -1,5 +1,7 @@
 # Bible Translation Predictor 📖
 
+https://colab.research.google.com/drive/1qaYEPGGS0pF7yJlB17U7LUFIq-xQA_LV?usp=sharing
+
 This is an API which which has a model under the hood which is used to make predictions about which bible translation a particular verse is being read from.
 <br/>
 
